@@ -1,10 +1,13 @@
 import Layout from "./components/Layout";
 import Pokemon from "./components/Pokemon";
+import { PokemonProvider } from "./hooks/usePokemon";
 
 function App() {
   return (
     <Layout>
-      <Pokemon />
+      <PokemonProvider>
+        <Pokemon />
+      </PokemonProvider>
     </Layout>
   );
 }
