@@ -18,7 +18,7 @@ const useFetchPokemon = (limit = 9, offset = 0) => {
       .finally(() => {
         setIsLoading(false);
       });
-  }, []);
+  }, [limit, offset]);
 
   useEffect(() => {
     setIsDetailsLoading(true);

@@ -53,7 +53,7 @@ const PokemonCard = ({
       sx={{
         width: "100%",
         maxWidth: 400,
-        backgroundColor: isClicked ? "#ccc" : "#181A1B",
+        backgroundColor: isClicked ? "#ccc" : "#fff",
       }}
     >
       {isBattle ? (
