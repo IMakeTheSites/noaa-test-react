@@ -1,12 +1,11 @@
 import { useMemo, useState } from "react";
 import useFetchPokemon from "../../hooks/useFetchPokemon";
-import AlertBar from "../moleclues/AlertBar";
-import SearchBar from "../moleclues/SearchBar";
+import AlertBar from "../shared/AlertBar";
+import SearchBar from "../shared/SearchBar";
 import Panel from "./Panel";
 
 const Pokemon = () => {
-  const { pokemonDetailedItems, isLoading, isDetailsLoading } =
-    useFetchPokemon();
+  const { pokemonDetailedItems } = useFetchPokemon();
 
   const [pokemonName, setPokemonName] = useState("");
   const [isBattle, setIsBattle] = useState(false);
@@ -17,10 +16,6 @@ const Pokemon = () => {
       item.name.includes(pokemonName)
     );
   }, [pokemonDetailedItems, pokemonName]);
-
-  if (isLoading || isDetailsLoading) {
-    return <div>Loading...</div>;
-  }
 
   return (
     <div>
