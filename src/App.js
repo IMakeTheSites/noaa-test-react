@@ -1,5 +1,12 @@
+import Layout from "./components/Layout";
+import Pokemon from "./components/Pokemon";
+
 function App() {
-  return <div className="App">Test</div>;
+  return (
+    <Layout>
+      <Pokemon />
+    </Layout>
+  );
 }
 
 export default App;
